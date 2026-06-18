@@ -1,0 +1,5 @@
+Support,Case,Support Group No.,Translation-X,Translation-Y,Translation-Z,Rotation-X,Rotation-Y,Rotation-Z
+A10,E11,,21,0,0,0,0,0
+A10,E13,,-21,0,0,0,0,0
+A10,E12,,0,21,0,0,0,0
+A10,E14,,0,-21,0,0,0,0
