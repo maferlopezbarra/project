@@ -1,5 +1,5 @@
 
-# AutoPIPE Data Processor
+# AutoPIPE Imposed Displacements Processor
 
 A Python-based ETL (Extract–Transform–Load) tool to process AutoPIPE data using SQLite, compute displacements, and export results to CSV.
 
