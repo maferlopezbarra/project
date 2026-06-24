@@ -14,6 +14,7 @@ async def run_pipeline(
     elevation: Annotated[float, Query()] = 10300,
     factor: Annotated[float, Query()] = 250
     ) -> list[dict]:
+    
     return run_displacements(db, elevation, factor)
     
 
