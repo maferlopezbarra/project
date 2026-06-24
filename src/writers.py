@@ -4,9 +4,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 file_output = BASE_DIR / "data/output/output.csv"
-file_output.parent.mkdir(exist_ok=True)
+
 
 def repeat(nodes: list[dict], output=file_output):
+
+    output.parent.mkdir(exist_ok=True)
 
     with open(output, "w", newline="") as file:
         writer = csv.DictWriter(
