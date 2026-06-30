@@ -203,6 +203,8 @@ This project demonstrates:
 - File upload handling
 - Automated testing
 
+---
+
 ## Author
 Maria Fernanda Lopez Barra
 
