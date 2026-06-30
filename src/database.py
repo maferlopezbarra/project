@@ -17,5 +17,5 @@ def get_config():
     parser.add_argument(
         "--factor", "-f", default="250", help="Seismic factor", type=float
     )
-    args: str = parser.parse_args()
+    args = parser.parse_args()
     return {"db": get_database(args.db), "elevation": args.elevation, "factor": args.factor}
