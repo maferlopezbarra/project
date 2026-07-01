@@ -1,7 +1,6 @@
 import csv
 from pathlib import Path
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 file_output = BASE_DIR / "data/output/output.csv"
 

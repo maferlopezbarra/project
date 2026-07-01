@@ -18,7 +18,7 @@ def support_coordinates(file: Path) -> list[tuple]:
     except (sqlite3.OperationalError, sqlite3.DatabaseError):
         raise ValueError("Database format not allowed")
     finally:
-            if conn is not None:
-                conn.close()
+        if conn is not None:
+            conn.close()
 
     return rows

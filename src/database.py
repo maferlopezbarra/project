@@ -3,8 +3,10 @@ from pathlib import Path
 
 BASE_DIR: str = Path(__file__).resolve().parent.parent
 
+
 def get_database(file):
     return BASE_DIR / "data/input" / file
+
 
 def get_config():
     parser = argparse.ArgumentParser()
@@ -18,4 +20,8 @@ def get_config():
         "--factor", "-f", default="250", help="Seismic factor", type=float
     )
     args = parser.parse_args()
-    return {"db": get_database(args.db), "elevation": args.elevation, "factor": args.factor}
+    return {
+        "db": get_database(args.db),
+        "elevation": args.elevation,
+        "factor": args.factor,
+    }
