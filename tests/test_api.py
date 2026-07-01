@@ -24,6 +24,7 @@ def test_input_output():
     assert "attachment" in response.headers["content-disposition"]
 
 
+
 def test_file_type():
     response = client.post(
         "/displacements",
