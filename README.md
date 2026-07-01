@@ -1,24 +1,19 @@
 
-# AutoPIPE Imposed Displacements Processor
+# AutoPIPE Displacements Processor
 
-A Python-based **ETL + API tool** to process AutoPIPE structural data using SQLite, compute seismic displacements, export results to CSV, and expose the pipeline via a FastAPI service.
+A Python-based **ETL + REST API** application to process AutoPIPE structural data, calculate seismic displacements, and generate CSV files ready for engineering workflows.
 
 The project provides:
 - A CLI pipeline for local processing
 - A FastAPI REST API for database upload and CSV download
-- Automated tests for core modules
+- Automated validation and temporary file management
+- Unit and API testing
 
 ---
 
 ## Overview
 
 This tool automates the extraction and transformation of structural support data from AutoPIPE databases to provide imposed displacements file.
-
-Workflow:
-
-1. Extracts support data from a SQLite database
-2. Calculate seismic drift values
-3. Generates formatted CSV output compatible with AutoPIPE
 
 Pipeline:
 
@@ -41,7 +36,7 @@ SQLite (.db) → Extract → Transform → CSV Output
 autopipe-displacement-processor/
 │
 ├── src/
-│   ├── main.py                 # CLI Entry point
+│   ├── main.py                 # CLI entry point
 │   ├── api.py                  # FastAPI application
 │   ├── database.py             # CLI configuration
 │   ├── extractors.py           # SQLite data extraction
@@ -52,6 +47,7 @@ autopipe-displacement-processor/
 |       ├── temporary.py        # Temporary file handling
 |       └── validation.py       # API file validation
 ├── tests/
+│   ├── test_api.py
 │   ├── test_extractors.py
 │   ├── test_processors.py
 │   └── test_writers.py
@@ -66,7 +62,7 @@ autopipe-displacement-processor/
 
 ## Installation
 
-Create environment:
+Create virtual environment:
 
 ```bash
 python -m venv .venv
@@ -190,8 +186,11 @@ pytest
 Test cover:
 
 - SQLite extraction
-- Drift calculation
+- Invalid database handling
+- Displacement calculations
 - CSV generation
+- API endpoints
+- File validation
 
 ---
 
@@ -199,10 +198,11 @@ Test cover:
 
 This project demonstrates:
 - ETL pipeline design
+- Backend API development with FastAPI
 - SQLite data processing
-- FastAPI backend development
-- File upload handling
+- File upload workflows
 - Automated testing
+- Engineering workflow automation
 
 ---
 
