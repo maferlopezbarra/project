@@ -22,7 +22,7 @@ def health():
 @app.post("/displacements")
 async def calculate_displacements(
     background_tasks: BackgroundTasks,
-    file: UploadFile = File(...),
+    file: UploadFile,
     elevation: float = Form(default=10300),
     factor: float = Form(default=250)
 ):
